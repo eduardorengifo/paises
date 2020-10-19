@@ -15,9 +15,18 @@ const CountryCard: React.FC<CountryCardProps> = ({
   InfoListProps
 }) => (
   <Card data-testid="country-card" p={0}>
-    <Image data-testid="country-card-flag" src={flag} />
+    <Image
+      sx={{ width: '100%', height: '185px' }}
+      data-testid="country-card-flag"
+      src={flag}
+    />
     <Box px={3} pt={2} pb={3}>
-      <Heading data-testid="country-card-title" as="h3" mb={2}>
+      <Heading
+        variant="headingEllipsis"
+        data-testid="country-card-title"
+        as="h3"
+        mb={2}
+      >
         {title}
       </Heading>
       <InfoList {...InfoListProps} />

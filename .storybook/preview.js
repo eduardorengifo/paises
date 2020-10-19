@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 import { GlobalStyle, lightTheme, darkTheme } from '../src/lib/theme';
 

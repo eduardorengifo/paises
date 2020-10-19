@@ -44,6 +44,14 @@ const theme: DefaultTheme = {
     caps: {
       textTransform: 'uppercase',
       letterSpacing: '0.1em'
+    },
+    headingEllipsis: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
     }
   },
   variants: {
@@ -84,18 +92,21 @@ const theme: DefaultTheme = {
       fontWeight: 'bold',
       color: 'background',
       bg: 'primary',
-      borderRadius: 'default'
+      borderRadius: 'default',
+      cursor: 'pointer'
     },
     outline: {
       variant: 'buttons.primary',
       color: 'primary',
       bg: 'transparent',
-      boxShadow: 'inset 0 0 2px'
+      boxShadow: 'inset 0 0 2px',
+      cursor: 'pointer'
     },
     secondary: {
       variant: 'buttons.primary',
       color: 'background',
-      bg: 'secondary'
+      bg: 'secondary',
+      cursor: 'pointer'
     }
   },
   styles: {

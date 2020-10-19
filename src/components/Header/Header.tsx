@@ -7,7 +7,7 @@ import Container from '../Container';
 export interface HeaderProps {
   title: string;
   isDarkTheme?: boolean;
-  onChangeTheme?: () => void;
+  onChangeTheme?: () => any;
 }
 
 const Header: React.FC<HeaderProps> = ({

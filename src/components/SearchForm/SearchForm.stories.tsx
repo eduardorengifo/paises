@@ -5,17 +5,20 @@ import SearchForm, { SearchFormProps } from './SearchForm';
 
 export default {
   title: 'SearchForm',
-  component: SearchForm
+  component: SearchForm,
+  excludeStories: ['searchFormArgs']
 } as Meta;
+
+export const searchFormArgs = {
+  languages: [
+    { id: '1', value: 'es', text: 'Spanish' },
+    { id: '2', value: 'en', text: 'English' }
+  ],
+  currencies: [{ id: '1', value: 'PEN', text: 'Nuevo sol' }],
+  regions: [{ id: '2', value: 'Americas', text: 'Americas' }]
+};
 
 const Template: Story<SearchFormProps> = args => <SearchForm {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  languages: [
-    { value: 'es', text: 'Spanish' },
-    { value: 'en', text: 'English' }
-  ],
-  currencies: [{ value: 'PEN', text: 'Nuevo sol' }],
-  regions: [{ value: 'Americas', text: 'Americas' }]
-};
+Default.args = searchFormArgs;
