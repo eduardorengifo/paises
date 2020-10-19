@@ -1,12 +1,15 @@
 import React from 'react';
 import { Box } from 'rebass/styled-components';
 
-export interface ContainerProps {
+import { CustomBoxKnownProps } from 'typings/formTypes';
+
+export interface ContainerProps extends CustomBoxKnownProps {
   children: React.ReactNode;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => (
+const Container: React.FC<ContainerProps> = ({ children, ...rest }) => (
   <Box
+    {...rest}
     sx={{
       maxWidth: 912,
       mx: 'auto',
