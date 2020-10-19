@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.1.0
+  cypress: cypress-io/cypress@1.26.0
 
 jobs:
   build:
@@ -38,3 +39,8 @@ workflows:
       - test:
           requires:
             - build
+      - cypress/run:
+          yarn: true
+          start: yarn start
+          requires:
+            - test

@@ -15,7 +15,7 @@ const Home = () => {
   const [showCountryList, setShowCountryList] = useState(false);
 
   return (
-    <Container>
+    <Container data-testid="home-view">
       <Box mb={3} py={3}>
         <SearchFormContainer
           onSubmit={setFormData}

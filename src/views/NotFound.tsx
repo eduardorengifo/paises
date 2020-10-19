@@ -9,7 +9,7 @@ const NotFound = () => {
   const history = useHistory();
 
   return (
-    <div>
+    <div data-testid="notfound-view">
       <Helmet>
         <title>{msg}</title>
       </Helmet>

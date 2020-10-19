@@ -97,7 +97,7 @@ const CountryListContainer: React.FC<CountryListContainerProps> = ({
 
   return (
     <div>
-      <Flex flexWrap="wrap" mx={-2}>
+      <Flex data-testid="country-card-list" flexWrap="wrap" mx={-2}>
         {data.Country.map(country => (
           <Box
             key={country?._id || '1'}
@@ -132,7 +132,9 @@ const CountryListContainer: React.FC<CountryListContainerProps> = ({
       </Flex>
       {hasMore ? (
         <Flex justifyContent="center" alignItems="center" pt={4} pb={2}>
-          <Button onClick={handleLoadMore}>Load More</Button>
+          <Button data-testid="country-list-load-more" onClick={handleLoadMore}>
+            Load More
+          </Button>
         </Flex>
       ) : (
         <ErrorMessage pt={4} pb={2} message="No more data." />
