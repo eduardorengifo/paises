@@ -71,12 +71,16 @@ const Country = () => {
     return <ErrorMessage height="40vh" />;
 
   return (
-    <Container>
+    <Container data-testid="country-view">
       <Helmet>
         <title>{`Country: ${data.Country[0]?.name}`}</title>
       </Helmet>
       <Box py={[2, 3, 4]}>
-        <Button mb={4} onClick={() => history.push('/')}>
+        <Button
+          data-testid="back-to-homepage"
+          mb={4}
+          onClick={() => history.push('/')}
+        >
           Back
         </Button>
         <Flex flexWrap="wrap" mx={-2}>

@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ name }) => {
   const d = new Date();
 
   return (
-    <Box as="footer" sx={{ textAlign: 'center', py: 4 }}>
+    <Box data-testid="footer" as="footer" sx={{ textAlign: 'center', py: 4 }}>
       <Container>
         <Text>{`Copyright © ${d.getFullYear()} ${name}.`}</Text>
       </Container>

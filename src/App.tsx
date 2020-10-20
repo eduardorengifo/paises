@@ -24,38 +24,40 @@ const App = () => {
   };
 
   return (
-    <ApolloProvider client={client}>
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-        <HelmetProvider>
-          <GlobalStyle />
-          <Helmet>
-            <title>Countries</title>
-            <meta name="description" content="List of countries." />
-          </Helmet>
-          <Router>
-            <div>
-              <Header
-                title="Países"
-                isDarkTheme={theme === 'dark'}
-                onChangeTheme={toggleTheme}
-              />
-              <Box as="main" py={5}>
-                <Switch>
-                  <Route exact path="/" component={HomeView} />
-                  <Route
-                    sensitive
-                    path="/countries/:alpha2Code"
-                    component={CountryView}
-                  />
-                  <Route path="*" component={NotFoundView} />
-                </Switch>
-              </Box>
-              <Footer name="Países" />
-            </div>
-          </Router>
-        </HelmetProvider>
-      </ThemeProvider>
-    </ApolloProvider>
+    <div className="App" data-testid="app" data-theme={theme}>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+          <HelmetProvider>
+            <GlobalStyle />
+            <Helmet>
+              <title>Countries</title>
+              <meta name="description" content="List of countries." />
+            </Helmet>
+            <Router>
+              <div>
+                <Header
+                  title="Países"
+                  isDarkTheme={theme === 'dark'}
+                  onChangeTheme={toggleTheme}
+                />
+                <Box as="main" py={5}>
+                  <Switch>
+                    <Route exact path="/" component={HomeView} />
+                    <Route
+                      sensitive
+                      path="/countries/:alpha2Code"
+                      component={CountryView}
+                    />
+                    <Route path="*" component={NotFoundView} />
+                  </Switch>
+                </Box>
+                <Footer name="Países" />
+              </div>
+            </Router>
+          </HelmetProvider>
+        </ThemeProvider>
+      </ApolloProvider>
+    </div>
   );
 };
 

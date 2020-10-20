@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1300,
+  "defaultCommandTimeout": 20000,
+  "blockHosts": [
+    "*.google-analytics.com"
+  ],
+  "env": {
+    "DEBUG": "src*,testing*,build*"
+  }
+}
