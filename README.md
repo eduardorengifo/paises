@@ -1,6 +1,6 @@
 # Países
 
-[![CircleCI](https://circleci.com/gh/eduardorengifo/paises/tree/develop.svg?style=svg)](https://circleci.com/gh/eduardorengifo/paises/tree/develop)
+[![CircleCI](https://circleci.com/gh/eduardorengifo/paises/tree/master.svg?style=svg)](https://circleci.com/gh/eduardorengifo/paises/tree/master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A React app to search countries with a GraphQL API.
@@ -13,14 +13,14 @@ A front-end challenge was the motivation for develop this project.
 
 ## Installation
 
-#### 1. Install dependencies with yarn.
+#### 1. Install dependencies with yarn
 ```bash
 yarn install
 ```
 
 #### 2. Run the project
 
-Run with yarn and open `http://localhost:3000` in your browser
+Run with yarn and open `http://localhost:3000` in your browser.
 ```bash
 yarn start
 ```
@@ -52,8 +52,8 @@ Builds the app for production to the `build` folder.
 yarn build
 ```
 
-Analyzing the Bundle Size
-> Note: You need to run `yarn build` before
+Analyzing the Bundle Size.
+> Note: You need to run `yarn build` before.
 
 ```bash
 yarn analyze
@@ -73,4 +73,4 @@ yarn analyze
 
 ## License
 
-Quers is open-sourced software licensed under the [MIT license](./LICENSE).
+Países is open-sourced software licensed under the [MIT license](./LICENSE).
