@@ -5,18 +5,6 @@ orbs:
   cypress: cypress-io/cypress@1.26.0
 
 jobs:
-  build:
-    executor:
-      name: node/default
-      tag: '12.19.0'
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: yarn
-      - run:
-          command: CI=true yarn build
-          name: Run YARN build
-
   test:
     executor:
       name: node/default
@@ -35,12 +23,16 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
-      - cypress/run:
+      - test
+      - cypress/install:
           yarn: true
-          start: yarn start
+          build: CI=true yarn build
           requires:
             - test
+      - cypress/run:
+          yarn: true
+          start: CI=true npx serve -s build -l 3000
+          store_artifacts: true
+          wait-on: 'http-get://localhost:3000'
+          requires:
+            - cypress/install
